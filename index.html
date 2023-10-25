@@ -29,6 +29,7 @@
       <li><a href="#lj">TTS on LJ Speech Dataset</a></li>
       <li><a href="#MutiSpeaker1">Muti-speaker results on VCTK</a></li>
       <li><a href="#MutiSpeaker2">Muti-speaker results on LibriTTS</a></li>
+      <li><a href="#div">Speech Diversity</a></li>
       <li><a href="#vc">VC on VCTK Dataset</a></li>
     </ul>
     </div>
@@ -307,48 +308,143 @@
     </div>
 <br><br>
 
+
     <div>
-      <a name="vc"><h2>VC on VCTK Dataset</h2></a>
+      <a name="div"><h2>Speech Diversity</h2></a>      
       <hr>
-      <table>
-          <thead>
-              <tr>
-              <th> Source Wav </th><th> Target Wav</th><th>  Conversion </th>
-              </tr>
-            </thead>
-        <tbody>
-        <tr>
-          <td><audio controls="" preload="none"><source src="audios/vc/src/0.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="audios/vc/tgt/0.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="audios/vc/convert/0.wav"></audio></td>
+     
+      <tr>
+        <td colspan="5"><span>   <b>Different values of scaling factors on the variance of the VAE priors:</b> </span></td>
+     </tr>
+
+    <table>
+
+    <tbody>
+      <tr>
+        <td colspan="2"><span>Audios from EFTS2 with scaling factors: t<sub>A</sub>=0, t<sub>1</sub>=1.0, t<sub>2</sub>=0.8. </span></td>
+     </tr>
+    <tr>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_1.0_T2_0.8/LJ016-0117_sample_0.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_1.0_T2_0.8/LJ016-0117_sample_1.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_1.0_T2_0.8/LJ016-0117_sample_2.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_1.0_T2_0.8/LJ016-0117_sample_3.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_1.0_T2_0.8/LJ016-0117_sample_4.wav"></audio></td>
+    </tr>
+    <tr>
+      <td colspan="5"><span>Audios from EFTS2 with scaling factors: t<sub>A</sub>=0.7, t<sub>1</sub>=0.8, t<sub>2</sub>=0.2. </span></td>
+   </tr>
+     <tr>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0.7_T1_0.8_T2_0.2/LJ016-0117_sample_0.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0.7_T1_0.8_T2_0.2/LJ016-0117_sample_1.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0.7_T1_0.8_T2_0.2/LJ016-0117_sample_2.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0.7_T1_0.8_T2_0.2/LJ016-0117_sample_3.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0.7_T1_0.8_T2_0.2/LJ016-0117_sample_4.wav"></audio></td>
+      </tr>
+    
+      </tbody>
+    </table>
+
+    <tr>
+      <td colspan="5"><span>   <b>Speech rate control:</b> EFTS2 is also capable of producing audio samples of different speech rate by multiplying a scaling factor on the predicted alignment. The following audios are produced by multiplying different scaling factors <b>s</b>.  </span></td>
+   </tr>
+
+  <table>
+
+      <tbody>
+      
+     <thead>
+      <tr>
+      <th> s=0.8 </th><th> s=0.9 </th><th>  s=1.0 </th><th>  s=1.1 </th><th>  s=1.2 </th>
+      </tr>
+    </thead>
+      <tr>
+        <td><audio controls="" preload="none"><source src="audios/tts/div/speech rate/LJ016-0117_sample_0.8.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/tts/div/speech rate/LJ016-0117_sample_0.9.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/tts/div/speech rate/LJ016-0117_sample_1.0.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/tts/div/speech rate/LJ016-0117_sample_1.1.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/tts/div/speech rate/LJ016-0117_sample_1.2.wav"></audio></td>
         </tr>
-         <tr>
-          <td><audio controls="" preload="none"><source src="audios/vc/src/1.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="audios/vc/tgt/1.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="audios/vc/convert/1.wav"></audio></td>
+    </tbody>
+
+  </table>
+</div>
+
+
+<br><br>
+
+  <div>
+    <a name="vc"><h2>VC on VCTK Dataset</h2></a>
+    <hr>
+    <tr>
+      <td colspan="2">Audio samples from seen speakers.</td>
+   </tr>
+    <table>
+        <thead>
+            <tr>
+            <th> Source Wav </th><th> Target Wav</th><th>  Conversion </th>
+            </tr>
+          </thead>
+      <tbody>
+      <tr>
+        <td><audio controls="" preload="none"><source src="audios/vc/src/0.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/vc/tgt/0.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/vc/convert/0.wav"></audio></td>
+      </tr>
+       <tr>
+        <td><audio controls="" preload="none"><source src="audios/vc/src/1.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/vc/tgt/1.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/vc/convert/1.wav"></audio></td>
+        </tr>
+        <tr>
+          <td><audio controls="" preload="none"><source src="audios/vc/src/2.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/vc/tgt/2.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/vc/convert/2.wav"></audio></td>
           </tr>
           <tr>
-            <td><audio controls="" preload="none"><source src="audios/vc/src/2.wav"></audio></td>
-            <td><audio controls="" preload="none"><source src="audios/vc/tgt/2.wav"></audio></td>
-            <td><audio controls="" preload="none"><source src="audios/vc/convert/2.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/vc/src/3.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/vc/tgt/3.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/vc/convert/3.wav"></audio></td>
             </tr>
             <tr>
-              <td><audio controls="" preload="none"><source src="audios/vc/src/3.wav"></audio></td>
-              <td><audio controls="" preload="none"><source src="audios/vc/tgt/3.wav"></audio></td>
-              <td><audio controls="" preload="none"><source src="audios/vc/convert/3.wav"></audio></td>
+              <td><audio controls="" preload="none"><source src="audios/vc/src/4.wav"></audio></td>
+              <td><audio controls="" preload="none"><source src="audios/vc/tgt/4.wav"></audio></td>
+              <td><audio controls="" preload="none"><source src="audios/vc/convert/4.wav"></audio></td>
               </tr>
               <tr>
-                <td><audio controls="" preload="none"><source src="audios/vc/src/4.wav"></audio></td>
-                <td><audio controls="" preload="none"><source src="audios/vc/tgt/4.wav"></audio></td>
-                <td><audio controls="" preload="none"><source src="audios/vc/convert/4.wav"></audio></td>
-                </tr>
-                <tr>
-                  <td><audio controls="" preload="none"><source src="audios/vc/src/5.wav"></audio></td>
-                  <td><audio controls="" preload="none"><source src="audios/vc/tgt/5.wav"></audio></td>
-                  <td><audio controls="" preload="none"><source src="audios/vc/convert/5.wav"></audio></td>
-                </tr>
-        </tbody>
-      </table>
-    </div>
-    <br><br>
+                <td><audio controls="" preload="none"><source src="audios/vc/src/5.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="audios/vc/tgt/5.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="audios/vc/convert/5.wav"></audio></td>
+              </tr>
+      </tbody>
+    </table>
+    <hr>
+    <tr>
+      <td colspan="2">Audio samples from unseen speakers.</td>
+   </tr>
+   <table>
+    <thead>
+        <tr>
+        <th> Source Wav </th><th> Target Wav</th><th>  Conversion </th>
+        </tr>
+      </thead>
+  <tbody>
+  <tr>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/65_src_64_generated.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/65_tgt_96_generated.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/65_64_96_generated.wav"></audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/61_src_34_generated.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/61_tgt_16_generated.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/61_34_16_generated.wav"></audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/75_src_43_generated.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/75_tgt_4_generated.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/75_43_4_generated.wav"></audio></td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+
 </body></html>
